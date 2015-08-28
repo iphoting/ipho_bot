@@ -13,5 +13,6 @@
   "hubot-uptimerobot",
   "hubot-wikipedia",
   "hubot-xkcd",
-  "hubot-xkcd-image"
+  "hubot-xkcd-image",
+  "hubot-bitly"
 ]
