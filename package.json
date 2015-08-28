@@ -17,7 +17,6 @@
     "hubot-maps": "0.0.2",
     "hubot-qr": "0.0.2",
     "hubot-redis-brain": "0.0.3",
-    "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
     "hubot-scripts-stock": "^0.2.1",
     "hubot-shipit": "^0.2.0",
