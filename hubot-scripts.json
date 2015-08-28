@@ -6,5 +6,6 @@
   "isup",
   "hashing",
   "countdown",
-  "ascii"
+  "ascii",
+  "base64"
 ]
