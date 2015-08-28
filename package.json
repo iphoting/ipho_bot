@@ -1,9 +1,9 @@
 {
-  "name": "iphobot",
+  "name": "ipho_bot",
   "version": "0.0.1",
   "private": true,
   "author": "Ronald Ip <myself@iphoting.com>",
-  "description": "A helper for iphoting",
+  "description": "A personal HuBot for iphoting",
   "dependencies": {
     "hubot": "^2.16.0",
     "hubot-bitly": "^1.0.2",
