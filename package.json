@@ -27,6 +27,7 @@
     "hubot-wikipedia": "0.0.2",
     "hubot-xkcd": "0.0.3",
     "hubot-xkcd-image": "^1.0.0",
+    "textspark": "0.0.4",
     "xml2js": "0.1.14"
   },
   "engines": {
