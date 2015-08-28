@@ -5,6 +5,7 @@
   "author": "Ronald Ip <myself@iphoting.com>",
   "description": "A helper for iphoting",
   "dependencies": {
+    "xml2js": "0.1.14",
     "hubot": "^2.16.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-explainshell": "^1.1.0",
