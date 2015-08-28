@@ -1,0 +1,30 @@
+{
+  "name": "iphobot",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Ronald Ip <myself@iphoting.com>",
+  "description": "A helper for iphoting",
+  "dependencies": {
+    "hubot": "^2.16.0",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-explainshell": "^1.1.0",
+    "hubot-foursquare-locator": "^1.2.0",
+    "hubot-google-images": "^0.2.1",
+    "hubot-google-translate": "^0.2.0",
+    "hubot-help": "^0.1.1",
+    "hubot-heroku-keepalive": "^1.0.0",
+    "hubot-http-status": "^0.2.1",
+    "hubot-maps": "0.0.2",
+    "hubot-pugme": "^0.1.0",
+    "hubot-qr": "0.0.2",
+    "hubot-redis-brain": "0.0.3",
+    "hubot-rules": "^0.1.1",
+    "hubot-scripts": "^2.16.2",
+    "hubot-scripts-stock": "^0.2.1",
+    "hubot-shipit": "^0.2.0",
+    "hubot-telegram": "0.0.5"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
