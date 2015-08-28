@@ -12,5 +12,6 @@
   "hubot-scripts-stock",
   "hubot-http-status",
   "hubot-explainshell",
-  "hubot-qr"
+  "hubot-qr",
+  "hubot-uptimerobot"
 ]
