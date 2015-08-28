@@ -13,5 +13,6 @@
   "hubot-http-status",
   "hubot-explainshell",
   "hubot-qr",
-  "hubot-uptimerobot"
+  "hubot-uptimerobot",
+  "hubot-wikipedia"
 ]
