@@ -1,13 +1,13 @@
 [
-  "spotify",
-  "rotten",
-  "tvshow",
-  "spark",
-  "isup",
-  "hashing",
-  "countdown",
-  "ascii",
-  "base64",
-  "roll",
-  "news"
+  "spotify.coffee",
+  "rotten.coffee",
+  "tvshow.coffee",
+  "spark.coffee",
+  "isup.coffee",
+  "hashing.coffee",
+  "countdown.coffee",
+  "ascii.coffee",
+  "base64.coffee",
+  "roll.coffee",
+  "news.coffee"
 ]
