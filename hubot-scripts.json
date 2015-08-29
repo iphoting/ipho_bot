@@ -8,6 +8,5 @@
   "countdown.coffee",
   "ascii.coffee",
   "base64.coffee",
-  "roll.coffee",
-  "news.coffee"
+  "roll.coffee"
 ]
