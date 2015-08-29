@@ -6,7 +6,6 @@
   "isup.coffee",
   "hashing.coffee",
   "countdown.coffee",
-  "ascii.coffee",
   "base64.coffee",
   "roll.coffee"
 ]
