@@ -23,6 +23,7 @@
     "hubot-scripts-stock": "^0.2.1",
     "hubot-telegram": "^0.0.5",
     "hubot-uptimerobot": "^0.0.3",
+    "hubot-voting": "^1.0.0",
     "hubot-wikipedia": "^0.0.2",
     "hubot-xkcd": "^0.0.3",
     "hubot-xkcd-image": "^1.0.0",
