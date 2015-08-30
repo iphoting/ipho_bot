@@ -10,6 +10,7 @@
     "hubot-bitly": "^1.0.2",
     "hubot-diagnostics": "^0.0.1",
     "hubot-explainshell": "^1.1.0",
+    "hubot-foursquare-locator": "^1.2.0",
     "hubot-google-images": "^0.2.1",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.1.1",
@@ -25,6 +26,8 @@
     "hubot-wikipedia": "^0.0.2",
     "hubot-xkcd": "^0.0.3",
     "hubot-xkcd-image": "^1.0.0",
+    "moment": "^2.10.6",
+    "node-foursquare": "^0.3.0",
     "textspark": "^0.1.0",
     "xml2js": "^0.4.10"
   },
