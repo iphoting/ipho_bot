@@ -14,5 +14,6 @@
   "hubot-xkcd",
   "hubot-xkcd-image",
   "hubot-bitly",
-  "hubot-pwqgen"
+  "hubot-pwqgen",
+  "hubot-auth"
 ]
