@@ -16,5 +16,6 @@
   "hubot-bitly",
   "hubot-pwqgen",
   "hubot-auth",
-  "hubot-voting"
+  "hubot-voting",
+  "hubot-instapaper"
 ]
