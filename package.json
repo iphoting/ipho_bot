@@ -27,6 +27,7 @@
     "hubot-wikipedia": "^0.0.2",
     "hubot-xkcd": "^0.0.3",
     "hubot-xkcd-image": "^1.0.0",
+    "merge": "^1.2.0",
     "moment": "^2.10.6",
     "node-foursquare": "^0.3.0",
     "textspark": "^0.1.0",
