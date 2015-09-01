@@ -19,27 +19,29 @@ Wolfram = require('wolfram-alpha').createClient(process.env.HUBOT_WOLFRAM_APPID)
 
 Util = require 'util'
 
-wq = (robot, res, match) ->
-  Wolfram.query match, (e, result) ->
-    ans = result[1]['subpods'][0]['text']
-    robot.logger.debug "Wolfram: #{Util.inspect ans}"
-
-    if result and result.length > 0
-      #result[1]['subpods'][0]['value']
-      return res.reply "#{ans}"
-    else
-      return res.reply 'Hmm...not sure...'
-
 module.exports = (robot) ->
   robot.respond /(question|wolfram|wfa) (.+)$/i, (msg) ->
     robot.logger.debug "Wolfram: #{msg.match[2]}"
-    wq(robot, msg, msg.match[2])
+    Wolfram.query msg.match[2], (e, result) ->
+      ans = result[1]['subpods'][0]['text']
+      robot.logger.debug "Wolfram: #{Util.inspect ans}"
+
+      if result and result.length > 0
+        msg.reply ans
+      else
+        msg.reply 'Hmm...not sure...'
 
   robot.catchAll (msg) ->
     r = new RegExp "^(?:#{robot.alias}|#{robot.name}) (.+)", "i"
     matches = msg.message.text.match(r)
     if matches != null && matches.length > 1
       robot.logger.debug "Catchall: #{matches[1]}"
-      wq(robot, msg, matches[1])
+      Wolfram.query matches[1], (e, result) ->
+        ans = result[1]['subpods'][0]['text']
+        robot.logger.debug "Wolfram: #{Util.inspect ans}"
 
+        if result and result.length > 0
+          msg.send ans
+        else
+          msg.send 'Hmm...not sure...'
     msg.finish()
