@@ -32,6 +32,7 @@
     "moment": "^2.10.6",
     "node-foursquare": "^0.3.0",
     "textspark": "^0.1.0",
+    "wolfram-alpha": "^0.2.1",
     "xml2js": "^0.4.10"
   },
   "engines": {
