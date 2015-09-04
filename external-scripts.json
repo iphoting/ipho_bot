@@ -17,5 +17,6 @@
   "hubot-pwqgen",
   "hubot-auth",
   "hubot-voting",
-  "hubot-instapaper"
+  "hubot-instapaper",
+  "hubot-s3-brain"
 ]
