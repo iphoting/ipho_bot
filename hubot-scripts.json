@@ -1,9 +1,7 @@
 [
   "spotify.coffee",
-  "rotten.coffee",
   "tvshow.coffee",
   "spark.coffee",
-  "isup.coffee",
   "hashing.coffee",
   "countdown.coffee",
   "base64.coffee",
