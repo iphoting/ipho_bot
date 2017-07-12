@@ -10,7 +10,7 @@
 #   iphoting
 #
 
-process.env.HUBOT_FOURSQUARE_ROLE || = 'foursquare'
+process.env.HUBOT_FOURSQUARE_ROLE ||= 'foursquare'
 
 PRIVATE_CMDS = [
   'foursquare.private'

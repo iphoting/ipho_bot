@@ -30,13 +30,13 @@
     "hubot-xkcd": "~0.0.3",
     "hubot-xkcd-image": "~1.0.0",
     "merge": "~1.2.0",
-    "moment": "~2.17.1",
+    "moment": "~2.18.1",
     "node-foursquare": "~0.3.0",
     "textspark": "~0.1.0",
-    "wolfram-alpha": "~0.5.0",
+    "wolfram-alpha": "~0.6.0",
     "xml2js": "~0.4.10"
   },
   "engines": {
-    "node": "0.12.x"
+    "node": "6.x"
   }
 }

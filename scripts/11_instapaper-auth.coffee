@@ -10,7 +10,7 @@
 #   iphoting
 #
 
-process.env.HUBOT_INSTAPAPER_ROLE || = 'instapaper'
+process.env.HUBOT_INSTAPAPER_ROLE ||= 'instapaper'
 
 PRIVATE_CMDS = [
   'instapaper.private'
