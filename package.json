@@ -5,7 +5,7 @@
   "author": "Ronald Ip <myself@iphoting.com>",
   "description": "A personal HuBot for iphoting",
   "dependencies": {
-    "coffeescript": "^2.3.1",
+    "coffeescript": "^1.12.7",
     "hubot": "^3.1.1",
     "hubot-auth": "~2.1.0",
     "hubot-bitly": "~1.0.2",
