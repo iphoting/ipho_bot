@@ -29,7 +29,7 @@
     "hubot-voting": "~1.1.0",
     "hubot-wikipedia": "~0.0.2",
     "hubot-xkcd": "0.0.5",
-    "hubot-xkcd-image": "~1.0.0",
+    "hubot-xkcd-image": "~1.0.1",
     "libxmljs": "^0.19.5",
     "merge": "~1.2.0",
     "moment": "^2.22.2",
