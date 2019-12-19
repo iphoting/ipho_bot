@@ -37,7 +37,7 @@
     "node-foursquare": "^0.4.6",
     "textspark": "~0.1.0",
     "wolfram-alpha": "~0.6.0",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.23"
   },
   "engines": {
     "node": "8.x"
