@@ -1,0 +1,13 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - node-foursquare > flowgen > lodash:
+        patched: '2020-06-04T14:43:55.470Z'
+    - node-foursquare > winston > async > lodash:
+        patched: '2020-06-04T14:43:55.470Z'
+  'npm:lodash:20180130':
+    - hubot-http-status > cheerio > lodash:
+        patched: '2020-06-04T14:43:55.470Z'
