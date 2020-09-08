@@ -35,7 +35,7 @@
     "moment": "^2.27.0",
     "nan": "^2.14.1",
     "node-foursquare": "^0.4.6",
-    "npm-check-updates": "^7.1.1",
+    "npm-check-updates": "^8.1.1",
     "textspark": "^0.1.0",
     "wolfram-alpha": "^0.6.0",
     "xml2js": "^0.4.23"
