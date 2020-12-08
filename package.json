@@ -39,12 +39,16 @@
     "npm-check-updates": "^8.1.1",
     "textspark": "^0.1.0",
     "wolfram-alpha": "^0.6.0",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "snyk": "^1.434.2"
   },
   "engines": {
     "node": "10.x"
   },
   "scripts": {
-    "test": "bin/hubot-test.sh"
-  }
+    "test": "bin/hubot-test.sh",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
