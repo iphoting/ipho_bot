@@ -34,7 +34,7 @@
     "libxmljs": "^0.19.7",
     "merge": "^2.1.1",
     "moment": "^2.27.0",
-    "nan": "^2.14.1",
+    "nan": "^2.15.0",
     "node-foursquare": "^0.4.6",
     "npm-check-updates": "^8.1.1",
     "textspark": "^0.1.0",
