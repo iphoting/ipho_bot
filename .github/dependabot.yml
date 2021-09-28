@@ -12,7 +12,3 @@ updates:
   assignees:
   - iphoting
   versioning-strategy: lockfile-only
-  ignore:
-  - dependency-name: coffeescript
-    versions:
-    - ">= 2.a, < 3"
