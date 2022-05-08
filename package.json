@@ -31,7 +31,7 @@
     "hubot-wikipedia": "^0.0.4",
     "hubot-xkcd": "0.0.5",
     "hubot-xkcd-image": "^1.0.1",
-    "libxmljs": "^0.19.7",
+    "libxmljs": "^0.19.8",
     "merge": "^2.1.1",
     "moment": "^2.29.1",
     "nan": "^2.15.0",
