@@ -33,7 +33,7 @@
     "hubot-xkcd-image": "^1.0.1",
     "libxmljs": "^0.19.7",
     "merge": "^2.1.1",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "nan": "^2.16.0",
     "node-foursquare": "^0.4.6",
     "npm-check-updates": "^15.0.0",
