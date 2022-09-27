@@ -45,6 +45,7 @@
     "node": "10.x"
   },
   "scripts": {
-    "test": "bin/hubot-test.sh"
+    "test": "bin/hubot-test.sh",
+    "start": "bin/hubot"
   }
 }
