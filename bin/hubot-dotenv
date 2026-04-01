@@ -2,7 +2,7 @@
 
 set -e
 
-npm install
-export PATH="node_modules/.bin:$PATH"
+# shellcheck source=bin/hubot-common
+. "$(dirname "$0")/hubot-common"
 
 exec node -r dotenv/config node_modules/.bin/hubot "$@"
