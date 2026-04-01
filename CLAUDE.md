@@ -6,6 +6,7 @@ A personal Hubot Telegram bot deployed on Dokku. Scripts are written in CoffeeSc
 
 ```
 scripts/                  Custom CoffeeScript scripts loaded at startup
+adapters/telegram.mjs     Custom ESM Telegram adapter (replaces hubot-telegram)
 external-scripts.json     Third-party Hubot plugins to load
 hubot-scripts.json        Built-in hubot-scripts package scripts to load
 bin/hubot                 Startup script (runs npm install, then hubot)
@@ -47,7 +48,7 @@ npm install
 bin/hubot
 
 # Telegram adapter (requires HUBOT_TELEGRAM_TOKEN)
-bin/hubot -a telegram
+bin/hubot -f ./adapters/telegram.mjs
 ```
 
 Once running, address the bot by name: `ipho_bot help`
