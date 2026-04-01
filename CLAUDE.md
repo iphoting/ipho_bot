@@ -32,8 +32,6 @@ Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`hubot-s3-brain
 | `HUBOT_S3_BRAIN_ACCESS_KEY_ID` | AWS access key for S3 brain |
 | `HUBOT_S3_BRAIN_SECRET_ACCESS_KEY` | AWS secret key for S3 brain |
 | `HUBOT_S3_BRAIN_BUCKET` | S3 bucket name |
-| `HUBOT_FOURSQUARE_CLIENT_ID` | Foursquare API client ID |
-| `HUBOT_FOURSQUARE_CLIENT_SECRET` | Foursquare API client secret |
 | `HUBOT_INSTAPAPER_USERNAME` | Instapaper username |
 | `HUBOT_INSTAPAPER_PASSWORD` | Instapaper password |
 

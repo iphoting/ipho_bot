@@ -13,7 +13,6 @@
     "hubot-bitly": "^1.0.2",
     "hubot-diagnostics": "^2.1.3",
     "hubot-explainshell": "^1.1.0",
-    "hubot-foursquare-locator": "^1.3.18",
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
     "hubot-help": "^2.1.5",
@@ -36,7 +35,6 @@
     "merge": "^2.1.1",
     "moment": "^2.29.1",
     "nan": "^2.26.2",
-    "node-foursquare": "^0.4.6",
     "npm-check-updates": "^17.0.0",
     "textspark": "^0.1.0",
     "xml2js": "^0.6.2"
