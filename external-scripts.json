@@ -1,22 +1,5 @@
 [
   "hubot-diagnostics",
   "hubot-help",
-  "hubot-google-images",
-  "hubot-google-translate",
-  "hubot-maps",
-  "hubot-redis-brain",
-  "hubot-scripts-stock",
-  "hubot-http-status",
-  "hubot-explainshell",
-  "hubot-qr",
-  "hubot-uptimerobot",
-  "hubot-wikipedia",
-  "hubot-xkcd",
-  "hubot-xkcd-image",
-  "hubot-bitly",
-  "hubot-pwqgen",
-  "hubot-auth",
-  "hubot-voting",
-  "hubot-instapaper",
-  "hubot-s3-brain"
+  "hubot-redis-brain"
 ]

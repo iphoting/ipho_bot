@@ -3,22 +3,15 @@
 export FOURSQUARE_CLIENT_ID="test"
 export FOURSQUARE_CLIENT_SECRET="test"
 export FOURSQUARE_ACCESS_TOKEN="test"
-export HUBOT_S3_BRAIN_BUCKET="iphobot"
-export HUBOT_LOG_LEVEL="debug"
-export HUBOT_S3_BRAIN_SAVE_INTERVAL=3600
+export HUBOT_LOG_LEVEL="error"
 
-## start
+## Use --execute to run ping after all scripts have loaded, then exit.
+## expect is needed because the Shell adapter requires a TTY.
 expect <<EOL
   set timeout 30
-  spawn bin/hubot-dotenv --name iphobot
-  # workaround for current hubot which does not show prompt until pressed enter
-  # so we simulate it once 'INFO hubot-redis-brain: Using default redis on localhost:6379' appears
-  expect "Saved brain"
-  send "\r"
-  expect "iphobot> "
-  send "iphobot ping\r"
+  spawn bin/hubot-dotenv --name iphobot --execute ping
   expect {
-    "PONG" {}
-    timeout {exit 1}
+    "PONG" { exit 0 }
+    timeout { exit 1 }
   }
 EOL
