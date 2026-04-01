@@ -1,4 +1,4 @@
-FROM node:10-alpine AS builder
+FROM node:22-alpine AS builder
 
 RUN \
   apk update && apk upgrade && \
@@ -14,7 +14,7 @@ RUN \
   npm cache clean --force && \
   chown -R 65534:65534 ~/.npm
 
-FROM node:10-alpine
+FROM node:22-alpine
 
 WORKDIR /app
 COPY --from=builder /app/node_modules ./node_modules

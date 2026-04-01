@@ -1,0 +1,97 @@
+# ipho_bot
+
+A personal Hubot Telegram bot deployed on Dokku. Scripts are written in CoffeeScript and live in `scripts/`.
+
+## Architecture
+
+```
+scripts/                  Custom CoffeeScript scripts loaded at startup
+external-scripts.json     Third-party Hubot plugins to load
+hubot-scripts.json        Built-in hubot-scripts package scripts to load
+bin/hubot                 Startup script (runs npm install, then hubot)
+Procfile                  Process definitions (web = Telegram adapter)
+```
+
+Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`hubot-s3-brain`).
+
+## Prerequisites
+
+- Node.js 22.x
+- A running Redis instance (for brain storage)
+- The `expect` CLI tool (for running tests)
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `HUBOT_TELEGRAM_TOKEN` | Telegram Bot API token |
+| `HUBOT_WOLFRAM_APPID` | Wolfram Alpha App ID |
+| `REDIS_URL` | Redis connection URL (default: `redis://localhost:6379`) |
+| `HUBOT_S3_BRAIN_ACCESS_KEY_ID` | AWS access key for S3 brain |
+| `HUBOT_S3_BRAIN_SECRET_ACCESS_KEY` | AWS secret key for S3 brain |
+| `HUBOT_S3_BRAIN_BUCKET` | S3 bucket name |
+| `HUBOT_FOURSQUARE_CLIENT_ID` | Foursquare API client ID |
+| `HUBOT_FOURSQUARE_CLIENT_SECRET` | Foursquare API client secret |
+| `HUBOT_INSTAPAPER_USERNAME` | Instapaper username |
+| `HUBOT_INSTAPAPER_PASSWORD` | Instapaper password |
+
+Copy `.env.example` (if present) to `.env` — `dotenv` loads it automatically via `bin/hubot-dotenv`.
+
+## Running Locally
+
+```sh
+# Install dependencies
+npm install
+
+# Console adapter (no Telegram needed)
+bin/hubot
+
+# Telegram adapter (requires HUBOT_TELEGRAM_TOKEN)
+bin/hubot -a telegram
+```
+
+Once running, address the bot by name: `ipho_bot help`
+
+## Testing
+
+```sh
+npm test
+```
+
+This runs `bin/hubot-test.sh` using the `expect` CLI tool. Requires the `HUBOT_S3_BRAIN_ACCESS_KEY_ID` and `HUBOT_S3_BRAIN_SECRET_ACCESS_KEY` env vars (or GitHub Actions secrets) to be set.
+
+## Adding Scripts
+
+Create a `.coffee` or `.js` file in `scripts/`. It will be loaded automatically at startup.
+
+```coffeescript
+module.exports = (robot) ->
+  robot.respond /hello/i, (res) ->
+    res.reply 'Hi!'
+```
+
+To add an external plugin: install it (`npm install <pkg>`), add it to `external-scripts.json`, and commit both files.
+
+## Updating Dependencies
+
+```sh
+npx npm-check-updates -u
+npm install
+```
+
+Review the diff before committing — major version bumps may require script changes.
+
+## Deployment
+
+Pushing to `master` triggers the `deploy` GitHub Actions workflow, which force-pushes to the Dokku remote at `ssh://dokku@c.iphoting.cc:3022/iphobot`.
+
+You can also push directly to the `dokku` branch to trigger a deploy without merging to master.
+
+## Docker
+
+```sh
+docker build -t ipho_bot .
+docker run --env-file .env ipho_bot
+```
+
+The multi-stage Dockerfile builds native modules (`libxmljs`, `nan`) in a `node:22-alpine` builder stage, then copies `node_modules` into a clean runtime image.
