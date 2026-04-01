@@ -143,7 +143,7 @@ class TelegramAdapter extends Adapter {
     this.bot.on('channel_post', this.handleUpdate)
 
     // Register middleware to enrich Response with Telegram API methods
-    this.robot.listenerMiddleware((context, next, done) => {
+    this.robot.listenerMiddleware((context) => {
       const response = context.response
       response.sendMessage = this.bot.sendMessage.bind(this.bot)
       response.sendAnimation = this.bot.sendAnimation.bind(this.bot)
@@ -156,7 +156,6 @@ class TelegramAdapter extends Adapter {
       response.sendVideoNote = this.bot.sendVideoNote.bind(this.bot)
       response.sendVoice = this.bot.sendVoice.bind(this.bot)
       response.sendChatAction = this.bot.sendChatAction.bind(this.bot)
-      next(() => done())
     })
 
     this.robot.logger.info('Telegram Adapter Started...')
