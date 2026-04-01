@@ -7,17 +7,21 @@ RUN \
 
 WORKDIR /app
 
-COPY package.json package-lock.json Procfile /app/
+COPY package.json package-lock.json .npmrc /app/
 
 RUN \
-  npm install && \
-  npm cache clean --force && \
-  chown -R 65534:65534 ~/.npm
+  npm ci && \
+  npm cache clean --force
 
 FROM node:22-alpine
 
+RUN apk --no-cache add libxml2 libxslt
+
 WORKDIR /app
+
 COPY --from=builder /app/node_modules ./node_modules
 COPY . .
+
+USER node
 
 CMD ["npm", "start"]

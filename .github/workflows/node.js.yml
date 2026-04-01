@@ -51,3 +51,30 @@ jobs:
       run: npm run build --if-present
     - name: Run Tests
       run: npm test
+
+  docker:
+    runs-on: ubuntu-latest
+
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Docker image
+      run: docker build -t ipho_bot .
+    - name: Smoke test
+      run: |
+        docker run --rm \
+          --network host \
+          -e REDIS_URL=redis://127.0.0.1:6379 \
+          -e HUBOT_LOG_LEVEL=error \
+          ipho_bot \
+          node -e "require('./node_modules/hubot'); console.log('smoke test passed')"
