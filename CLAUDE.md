@@ -25,7 +25,9 @@ Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`hubot-s3-brain
 | Variable | Description |
 |---|---|
 | `HUBOT_TELEGRAM_TOKEN` | Telegram Bot API token |
-| `HUBOT_WOLFRAM_APPID` | Wolfram Alpha App ID |
+| `ANTHROPIC_API_KEY` | Anthropic API key (for Claude AI catchall) |
+| `HUBOT_LLM_MODEL` | Claude model to use (default: `claude-haiku-4-5-20251001`) |
+| `HUBOT_LLM_MAX_HISTORY` | Per-user conversation turns to retain (default: `10`) |
 | `REDIS_URL` | Redis connection URL (default: `redis://localhost:6379`) |
 | `HUBOT_S3_BRAIN_ACCESS_KEY_ID` | AWS access key for S3 brain |
 | `HUBOT_S3_BRAIN_SECRET_ACCESS_KEY` | AWS secret key for S3 brain |
