@@ -1,2 +1,2 @@
-web: bin/hubot -a hubot-telegram
+web: bin/hubot -f ./adapters/telegram.mjs
 console: bin/hubot
