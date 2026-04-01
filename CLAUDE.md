@@ -94,4 +94,4 @@ docker build -t ipho_bot .
 docker run --env-file .env ipho_bot
 ```
 
-The multi-stage Dockerfile builds native modules (`libxmljs`, `nan`) in a `node:22-alpine` builder stage, then copies `node_modules` into a clean runtime image.
+The multi-stage Dockerfile runs `npm ci` in a builder stage, then copies `node_modules` into a clean runtime image.
