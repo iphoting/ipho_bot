@@ -14,6 +14,17 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
+
     strategy:
       matrix:
         node-version: [22.x]
@@ -39,7 +50,4 @@ jobs:
     - name: Run Build
       run: npm run build --if-present
     - name: Run Tests
-      env:
-        HUBOT_S3_BRAIN_ACCESS_KEY_ID: ${{ secrets.HUBOT_S3_BRAIN_ACCESS_KEY_ID }}
-        HUBOT_S3_BRAIN_SECRET_ACCESS_KEY: ${{ secrets.HUBOT_S3_BRAIN_SECRET_ACCESS_KEY }}
       run: npm test
