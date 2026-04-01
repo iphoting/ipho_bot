@@ -5,9 +5,4 @@ set -e
 npm install
 export PATH="node_modules/.bin:$PATH"
 
-# hubot-telegram reads TELEGRAM_TOKEN; bridge from the canonical env var name
-if [ -n "$HUBOT_TELEGRAM_TOKEN" ] && [ -z "$TELEGRAM_TOKEN" ]; then
-  export TELEGRAM_TOKEN="$HUBOT_TELEGRAM_TOKEN"
-fi
-
 exec node_modules/.bin/hubot --name "ipho_bot" "$@"
