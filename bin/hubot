@@ -7,8 +7,8 @@ set -e
 
 # Default to the Telegram adapter unless an adapter is already specified or we
 # are running in CI (where no Telegram token is available).
-if [ -z "$CI" ] && ! echo " $* " | grep -q -- ' -a '; then
-  set -- -a hubot-telegram "$@"
+if [ -z "$CI" ] && ! echo " $* " | grep -qE -- ' (-a|-f) '; then
+  set -- -f ./adapters/telegram.mjs "$@"
 fi
 
 exec node_modules/.bin/hubot --name "ipho_bot" "$@"
