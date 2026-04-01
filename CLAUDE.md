@@ -25,7 +25,7 @@ Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`hubot-s3-brain
 
 | Variable | Description |
 |---|---|
-| `HUBOT_TELEGRAM_TOKEN` | Telegram Bot API token |
+| `TELEGRAM_TOKEN` | Telegram Bot API token (`HUBOT_TELEGRAM_TOKEN` accepted as legacy alias) |
 | `ANTHROPIC_API_KEY` | Anthropic API key (for Claude AI catchall) |
 | `HUBOT_LLM_MODEL` | Claude model to use (default: `claude-haiku-4-5-20251001`) |
 | `HUBOT_LLM_MAX_HISTORY` | Per-user conversation turns to retain (default: `10`) |
@@ -44,11 +44,11 @@ Copy `.env.example` (if present) to `.env` — `dotenv` loads it automatically v
 # Install dependencies
 npm install
 
-# Console adapter (no Telegram needed)
+# Telegram adapter — default when TELEGRAM_TOKEN is set (requires token)
 bin/hubot
 
-# Telegram adapter (requires HUBOT_TELEGRAM_TOKEN)
-bin/hubot -f ./adapters/telegram.mjs
+# Shell/console adapter (no Telegram token needed)
+CI=1 bin/hubot
 ```
 
 Once running, address the bot by name: `ipho_bot help`
@@ -60,6 +60,8 @@ npm test
 ```
 
 This runs `bin/hubot-test.sh` using the `expect` CLI tool. Requires the `HUBOT_S3_BRAIN_ACCESS_KEY_ID` and `HUBOT_S3_BRAIN_SECRET_ACCESS_KEY` env vars (or GitHub Actions secrets) to be set.
+
+CI also runs `bin/smoke-test.mjs` to validate that the Telegram adapter starts cleanly (middleware signatures, class hierarchy).
 
 ## Adding Scripts
 
