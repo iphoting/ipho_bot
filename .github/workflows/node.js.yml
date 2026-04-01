@@ -77,4 +77,4 @@ jobs:
           -e REDIS_URL=redis://127.0.0.1:6379 \
           -e HUBOT_LOG_LEVEL=error \
           ipho_bot \
-          node -e "require('./node_modules/hubot'); console.log('smoke test passed')"
+          node bin/smoke-test.mjs
