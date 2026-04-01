@@ -5,7 +5,8 @@ npm install
 export PATH="node_modules/.bin:$PATH"
 
 # Shell adapter logs an error if .hubot_history doesn't exist yet; pre-create it.
-touch .hubot_history
+# Ignore failures — the directory may not be writable (e.g. Dokku with Telegram adapter).
+touch .hubot_history 2>/dev/null || true
 
 # hubot-telegram reads TELEGRAM_TOKEN; bridge from the canonical env var name
 if [ -n "$HUBOT_TELEGRAM_TOKEN" ] && [ -z "$TELEGRAM_TOKEN" ]; then
