@@ -6,6 +6,7 @@
   "description": "A personal HuBot for iphoting",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
+    "@aws-sdk/client-s3": "^3.0.0",
     "coffeescript": "^2.7.0",
     "dotenv": "^17.3.1",
     "hubot": "^14.1.0",
@@ -21,7 +22,6 @@
     "hubot-pwqgen": "^0.0.5",
     "hubot-qr": "^0.0.2",
     "hubot-redis-brain": "^3.0.1",
-    "hubot-s3-brain": "^0.2.0",
     "hubot-scripts": "^2.17.2",
     "hubot-scripts-stock": "^0.2.1",
     "hubot-telegram": "^1.2.0",
