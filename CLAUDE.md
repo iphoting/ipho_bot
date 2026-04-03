@@ -13,7 +13,7 @@ bin/hubot                 Startup script (runs npm install, then hubot)
 Procfile                  Process definitions (web = Telegram adapter)
 ```
 
-Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`hubot-s3-brain`).
+Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`scripts/s3-brain.js` via `@aws-sdk/client-s3`).
 
 ## Prerequisites
 
@@ -33,6 +33,8 @@ Brain storage uses Redis (`hubot-redis-brain`) with S3 fallback (`hubot-s3-brain
 | `HUBOT_S3_BRAIN_ACCESS_KEY_ID` | AWS access key for S3 brain |
 | `HUBOT_S3_BRAIN_SECRET_ACCESS_KEY` | AWS secret key for S3 brain |
 | `HUBOT_S3_BRAIN_BUCKET` | S3 bucket name |
+| `HUBOT_S3_BRAIN_KEY` | S3 object key (default: `hubot-brain.json`) |
+| `HUBOT_S3_BRAIN_REGION` | AWS region (default: `us-east-1`) |
 | `HUBOT_INSTAPAPER_USERNAME` | Instapaper username |
 | `HUBOT_INSTAPAPER_PASSWORD` | Instapaper password |
 
