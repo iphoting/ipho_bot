@@ -32,7 +32,7 @@
     "hubot-xkcd-image": "^1.0.1",
     "merge": "^2.1.1",
     "moment": "^2.29.1",
-    "npm-check-updates": "^17.0.0",
+    "npm-check-updates": "^22.1.1",
     "textspark": "^0.1.0",
     "xml2js": "^0.6.2"
   },
