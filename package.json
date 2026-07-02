@@ -5,7 +5,7 @@
   "author": "Ronald Ip <myself@iphoting.com>",
   "description": "A personal HuBot for iphoting",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.109.0",
+    "@anthropic-ai/sdk": "^0.110.0",
     "@aws-sdk/client-s3": "^3.0.0",
     "coffeescript": "^2.7.0",
     "dotenv": "^17.3.1",
